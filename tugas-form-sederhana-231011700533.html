@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Newsletter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .newsletter-section {
+      background-color: #111;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .newsletter-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .newsletter-section p {
+      font-size: 1rem;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-control {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+    }
+    .form-control:focus {
+      background-color: #333;
+      border-color: #666;
+    }
+    .btn-submit {
+      background-color: #ff4136;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 30px;
+      border-radius: 25px;
+      border: none;
+    }
+    .btn-submit:hover {
+      background-color: #e73a2d;
+    }
+    @media (max-width: 768px) {
+      .newsletter-section h2 {
+        font-size: 2rem;
+      }
+      .form-container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Newsletter Section -->
+<div class="newsletter-section">
+  <div class="container">
+    <h2>Daftar Newsletter Kami</h2>
+    <p>Dapatkan update terbaru tentang produk, promo, dan event spesial langsung ke email Anda.</p>
+
+    <div class="form-container">
+      <form action="#" method="POST">
+        <!-- Field Nama -->
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+        </div>
+        <!-- Field Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan alamat email" required>
+        </div>
+        <!-- Tombol Submit -->
+        <button type="submit" class="btn btn-submit">Daftar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

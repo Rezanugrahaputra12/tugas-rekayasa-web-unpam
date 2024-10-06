@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan Tiket Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+    }
+    .order-section {
+      background-color: #fff;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 50px auto;
+    }
+    .order-section h2 {
+      font-size: 2rem;
+      color: #000;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .form-label {
+      font-weight: bold;
+      color: #333;
+    }
+    .form-control {
+      border-radius: 25px;
+      padding: 10px;
+    }
+    .btn-submit {
+      background-color: #111;
+      color: white;
+      font-weight: bold;
+      padding: 10px 30px;
+      border-radius: 25px;
+      border: none;
+      margin-top: 20px;
+      width: 100%;
+    }
+    .btn-submit:hover {
+      background-color: #555;
+    }
+    .form-check-label {
+      color: #555;
+      font-size: 0.9rem;
+    }
+    .form-error {
+      color: red;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .order-section {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Pemesanan Tiket Section -->
+<div class="order-section">
+  <h2>Pemesanan Tiket Online</h2>
+  <form id="ticketForm">
+    <!-- Tanggal Pemesanan (Date Picker) -->
+    <div class="mb-3">
+      <label for="tanggalPemesanan" class="form-label">Tanggal Pemesanan</label>
+      <input type="date" class="form-control" id="tanggalPemesanan" name="tanggalPemesanan" required>
+      <div id="tanggalError" class="form-error"></div>
+    </div>
+
+    <!-- Jumlah Tiket (Input Number) -->
+    <div class="mb-3">
+      <label for="jumlahTiket" class="form-label">Jumlah Sepatu</label>
+      <input type="number" class="form-control" id="jumlahTiket" name="jumlahTiket" min="1" max="10" value="1" required>
+      <div id="jumlahError" class="form-error"></div>
+    </div>
+
+    <!-- Checkbox Syarat & Ketentuan -->
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="syaratKetentuan" required>
+      <label class="form-check-label" for="syaratKetentuan">Saya setuju dengan <a href="#">syarat dan ketentuan</a></label>
+      <div id="checkboxError" class="form-error"></div>
+    </div>
+
+    <!-- Tombol Submit -->
+    <button type="submit" class="btn-submit">Pesan Sepatu</button>
+  </form>
+</div>
+
+<script>
+// Validasi form
+document.getElementById('ticketForm').addEventListener('submit', function(event) {
+  let valid = true;
+
+  // Validasi Tanggal Pemesanan
+  const tanggalPemesanan = document.getElementById('tanggalPemesanan').value;
+  if (!tanggalPemesanan) {
+    document.getElementById('tanggalError').innerText = "Tanggal harus diisi.";
+    valid = false;
+  } else {
+    document.getElementById('tanggalError').innerText = "";
+  }
+
+  // Validasi Jumlah Tiket
+  const jumlahTiket = document.getElementById('jumlahTiket').value;
+  if (jumlahTiket < 1 || jumlahTiket > 10) {
+    document.getElementById('jumlahError').innerText = "Jumlah tiket harus di antara 1 hingga 10.";
+    valid = false;
+  } else {
+    document.getElementById('jumlahError').innerText = "";
+  }
+
+  // Validasi Checkbox Syarat & Ketentuan
+  const syaratKetentuan = document.getElementById('syaratKetentuan').checked;
+  if (!syaratKetentuan) {
+    document.getElementById('checkboxError').innerText = "Anda harus menyetujui syarat dan ketentuan.";
+    valid = false;
+  } else {
+    document.getElementById('checkboxError').innerText = "";
+  }
+
+  if (!valid) {
+    event.preventDefault();
+  }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

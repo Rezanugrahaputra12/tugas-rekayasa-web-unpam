@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HypeShoes.ID</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Navbar */
+    .navbar-brand {
+      font-weight: bold;
+      color: #000;
+    }
+    .navbar {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar-nav .nav-link {
+      color: #333;
+      font-weight: 500;
+    }
+    .navbar-toggler-icon {
+      background-color: #000;
+    }
+
+    /* Hero Section */
+    .section-utama {
+      background: url('hero.jpg') no-repeat center center;
+      background-size: cover;
+      color: rgb(12, 11, 11);
+      padding: 100px 0;
+      text-align: center;
+    }
+    .section-utama h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .section-utama p {
+      font-size: 18px;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: 50px 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+    .btn-beli {
+      background-color: #000;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 20px auto 0;
+    }
+    .btn-beli:hover {
+      background-color: #333;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 0;
+      background-color: #000;
+      color: white;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">HypeShoes.ID</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kontak</a>
+          <li class="nav-item">
+            <a class="nav-link" href="tugas-form-sederhana-231011700533.html">Newsletter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tugas-checkbox-radio-231011700533.html">Survey</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tugas-dropdown-textarea-23011700533.html">Dropdown</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="5. tugas-registrasi-validasi-231011700533.html">Registrasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tugas-advance-components-231011700533.html">Pemesanan</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="section-utama">
+    <div class="container">
+      <h1>Sepatu Hype untuk Performa Terbaik</h1>
+      <p>Koleksi sepatu terbaru kami dirancang untuk memberikan kenyamanan dan gaya yang optimal.</p>
+      <a href="#" class="btn btn-beli">Lihat Koleksi</a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery container my-5">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mb-4">
+        <img src="adidas.jpg" alt="Sepatu Sporty">
+        <div class="gallery-caption">Adidas Gazelle - Rp 2.199.000</div>
+        <a href="#" class="btn btn-beli">Beli Sekarang</a>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <img src="converse.jpg" alt="Sepatu Casual">
+        <div class="gallery-caption">Converse Comme des Garçons - Rp 2.199.000</div>
+        <a href="#" class="btn btn-beli">Beli Sekarang</a>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <img src="nb.jpg" alt="Sepatu Formal">
+        <div class="gallery-caption">New Balance 550 - Rp 1.799.000</div>
+        <a href="#" class="btn btn-beli">Beli Sekarang</a>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <img src="puma.jpg" alt="Sneakers">
+        <div class="gallery-caption">Puma Palermo Brown Mushroom - Rp 1.499.000</div>
+        <a href="#" class="btn btn-beli">Beli Sekarang</a>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <img src="yeezy.jpg" alt="Sepatu Running">
+        <div class="gallery-caption">Yeezy Boost 350 V2 Series - Rp 4.199.000</div>
+        <a href="#" class="btn btn-beli">Beli Sekarang</a>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4">
+        <img src="nike.jpg" alt="Sepatu Boots">
+        <div class="gallery-caption">Air Jordan 1 Low Washed Denim - Rp 1.999.000</div>
+        <a href="#" class="btn btn-beli">Beli Sekarang</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Kontak Kami: +62 822 7548 7240 | Email: info@HypeShoes.com</p>
+    <p>&copy; 2024 HypeShoes. All Rights Reserved.</p>
+    <div>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
